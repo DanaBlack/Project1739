@@ -1,0 +1,604 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Work+Sans:300,400,500,600,700');
+
+body {
+    color: #313a43;;
+    font-family: 'Work Sans', sans-serif;
+}
+
+img {
+    vertical-align: baseline;
+}
+
+/*--------------------------------------------------------------
+# Links
+--------------------------------------------------------------*/
+a {
+    color: #313a43;
+    text-align: center;
+}
+
+a:visited {
+    color: #317B76;
+}
+
+a:hover, a:focus, a:active {
+    color: #41A49D;
+    text-decoration: none;
+    font-size: 125%;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:hover, a:active {
+    outline: 0;
+    list-style: none;
+}
+
+/*--------------------------------------------------------------
+# Helper Utilities
+--------------------------------------------------------------*/
+.flex {
+    display: flex;
+}
+
+/*--------------------------------------------------------------
+# Outer Container
+--------------------------------------------------------------*/
+@media screen and (min-width: 992px) {
+    .outer-container {
+        padding-left: 80px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .no-padding {
+        padding: 0;
+    }
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+body, html {
+    height: 100%;
+}
+
+
+.hero-image {
+    
+    background-image: url("pictures/generic/banner2OP.jpg");
+
+   
+    height: 75%;
+
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #20272C ;
+    font-weight: 800;
+    
+}
+
+/*
+# Site Branding
+--------------------------------*/
+.site-branding {
+    transition: all .5s;
+}
+
+.site-title {
+    margin: 0;
+    text-align: center;
+}
+
+.site-navigation .site-title a {
+    display: block;
+}
+
+/*
+  Hamburger Menu
+----------------------------------------*/
+.hamburger-menu .menu-icon,
+.hamburger-menu .menu-close-icon {
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.hamburger-menu.close .menu-icon {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menu-close-icon {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.hamburger-menu.close .menu-close-icon {
+    visibility: visible;
+    opacity: 1;
+}
+
+.hamburger-menu img {
+    display: block;
+    margin: 0 auto;
+}
+
+/*
+# Site Navigation
+--------------------------------*/
+.site-navigation {
+    transition: all .5s;
+}
+
+/*
+# Main Menu
+--------------------------------*/
+.main-menu {
+    padding: 15px 30px;
+    margin: 0;
+}
+
+.main-menu li {
+    display: block;
+    padding: 8px 0;
+    font-size: 20px;
+    font-weight: 500;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.main-menu li:nth-last-of-type(1) {
+    border-bottom: 0;
+}
+
+.main-menu li a {
+    display: block;
+    color: #a6a6a6;
+    text-decoration: none;
+    transition: all 0.35s;
+}
+
+.main-menu li a:hover,
+.main-menu li.current-menu-item a {
+    color: #20c997;
+}
+
+/*
+# Social Profiles
+--------------------------------*/
+.social-profiles ul {
+    padding: 10px 0 34px 0;
+    margin: 0;
+}
+
+.social-profiles ul li {
+    display: block;
+    padding: 0 18px;
+    font-size: 1.5rem;
+}
+
+.social-profiles ul li a {
+    color: #191919;
+    transition: all 0.35s;
+}
+
+.social-profiles ul li a:hover {
+    color: #41A49D;
+}
+
+.nav-bar-sep {
+    height: 78px;
+}
+
+@media screen and (max-width: 992px) {
+    .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+        padding: 15px 30px;
+        background: #fff;
+        box-shadow: 0 12px 24px rgba(0,0,0,.09);
+    }
+
+    .site-header,
+    .hamburger-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger-menu {
+        flex-flow: column;
+    }
+
+    .hamburger-menu .menu-icon, .hamburger-menu .menu-close-icon {
+        position: absolute;
+        top: 26px;
+        right: 24px;
+    }
+
+    .main-menu li {
+        position: relative;
+    }
+
+    .main-menu li::after {
+        content: '';
+        position: absolute;
+        top: 11px;
+        right: 0;
+        font-family: 'FontAwesome', serif;
+    }
+
+    .main-menu li:hover::after,
+    .main-menu li.current-menu-item::after {
+        color: #f0437e;
+    }
+
+    .site-navigation {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        z-index: 99;
+        width: 100%;
+        height: 500px;
+        background: #fff;
+        box-shadow: 0 12px 24px rgba(0,0,0,.09);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.35s;
+    }
+
+    .site-navigation.show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .social-profiles ul {
+        padding: 80px 15px 30px;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .site-header,
+    .site-navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 80px;
+        height: 100vh;
+        padding: 0 15px;
+        box-shadow: 6px 0 12px rgba(0,0,0,.05);
+    }
+
+    .site-navigation {
+        background: #f7f7f7;
+    }
+
+    .site-navigation.show {
+        left: 80px;
+    }
+
+    .site-header {
+        background: #fff;
+    }
+
+    .site-header.no-shadow {
+        box-shadow: none;
+    }
+
+    .site-header .site-branding.hide {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .site-title {
+        padding: 28px 0 10px 0;
+    }
+
+    .hamburger-menu .menu-icon,
+    .hamburger-menu .menu-close-icon {
+        position: absolute;
+        top: calc(50vh - 22px);
+        left: 15px;
+        width: calc(100% - 30px);
+        padding: 10px 0;
+    }
+
+    .site-navigation {
+        left: -250px;
+        z-index: 99;
+        width: 250px;
+        padding: 0;
+        box-shadow: 16px 0 42px rgba(0,0,0,.09);
+    }
+
+    .main-menu {
+        height: calc(100vh - 160px);
+        padding: 0;
+    }
+
+    .main-menu li {
+        border-bottom: 0;
+        text-align: center;
+    }
+
+    .social-profiles ul li {
+        font-size: 1.125rem;
+    }
+}
+
+    #searchsm {
+        color: #20c997;
+    
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio-page .scroll-down {
+    margin-left: -60px;
+}
+
+.portfolio-content {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.home-page {
+    padding-top: 15px;
+}
+
+.home-page .portfolio-content {
+    margin-bottom: 15px;
+}
+
+.portfolio-content figure {
+    margin: 0;
+}
+
+.portfolio-content figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+}
+
+.portfolio-content .entry-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.9);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s;
+}
+
+.portfolio-content:hover .entry-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+.portfolio-content h3 {
+    margin-bottom: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.home-page .portfolio-content h3 {
+    font-size: 2.25rem;
+}
+
+.portfolio-content h3 a {
+    color: #191919;
+    text-decoration: none;
+}
+
+.portfolio-content ul {
+    padding: 0;
+    margin: 10px 0 0;
+    list-style: none;
+}
+
+.portfolio-content li {
+    margin: 0 3px;
+}
+
+.portfolio-content li a {
+    font-size: 0.875rem;
+    color: #a6a6a6;
+}
+
+@media screen and (min-width: 768px) {
+    .home-page {
+        padding: 0;
+    }
+
+    .home-page .portfolio-content {
+        margin-bottom: 0;
+    }
+}
+
+/*--------------------------------------------------------------
+# Single Portfolio
+--------------------------------------------------------------*/
+.single-portfolio {
+    padding-top: 15px;
+    padding-bottom: 70px;
+}
+
+.single-portfolio figure img {
+    max-width: 100%;
+}
+
+.single-portfolio .content-area h1 {
+    margin-top: 20px;
+    font-size: 2.25rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.single-portfolio .content-area .entry-content {
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #595959;
+}
+
+/*
+# Post Share
+--------------------------------*/
+.single-portfolio .post-share {
+    margin-top: 32px;
+}
+
+.single-portfolio .post-share label {
+    margin-right: 32px;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+}
+
+.single-portfolio .post-share ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.single-portfolio .post-share ul li {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 1;
+    color: #fff;
+}
+
+.single-portfolio .post-share ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-decoration: none;
+}
+
+.single-portfolio .post-share ul li.fb {
+    background: #4b6cd0;
+}
+
+.single-portfolio .post-share ul li.gp {
+    background: #f03b3b;
+}
+
+.single-portfolio .post-share ul li.in {
+    background: #bb8950;
+}
+
+.single-portfolio .post-share ul li.tw {
+    background: #49a7f3;
+}
+
+/*
+# Post Sidebar
+--------------------------------*/
+.single-portfolio .entry-meta {
+    margin-top: 24px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.single-portfolio .entry-meta label {
+    display: block;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.single-portfolio .date-format,
+.single-portfolio .post-category,
+.single-portfolio .posted-tags {
+    display: block;
+    margin-bottom: 26px;
+}
+
+.single-portfolio .posted-tags span,
+.single-portfolio .entry-meta a {
+    color: #bfbfbf;
+}
+
+/*
+# Post Nav
+--------------------------------*/
+.post-nav {
+    margin: 36px 0 0;
+}
+
+.post-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+@media screen and (min-width: 576px) {
+    .single-portfolio {
+        padding-top: 45px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .single-portfolio {
+        padding-top: 90px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .single-portfolio {
+        padding-top: 115px;
+    }
+}
+
+/*
+# HERB PRofile
+--------------------------------*/
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    
+}
+
+.text {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 500px;
+}
+
+    
+   
+
